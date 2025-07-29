@@ -22,7 +22,7 @@ export class TodoService {
 
   // Add a new Item
   addTodoItem(todoTask: string): Observable<TodoItem> {
-    const payload = { todoTask }; // Same as { todoTask: todoTask }
+    const payload = { todoTask };
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.http.post<TodoItem>(this.apiUrl, payload, { headers });
   }
